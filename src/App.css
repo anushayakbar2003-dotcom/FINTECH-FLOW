@@ -1,0 +1,186 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+/* =======================
+   THEME
+======================= */
+
+body.light {
+  background: #f4f7fb;
+  color: #1a1a1a;
+  transition: all 0.3s ease;
+}
+
+body.dark {
+  background: #0f172a;
+  color: #ffffff;
+  transition: all 0.3s ease;
+}
+
+/* =======================
+   APP CENTER LAYOUT
+======================= */
+
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 20px;
+}
+
+/* Center page content */
+.page {
+  max-width: 1000px;
+  margin: auto;
+  padding: 30px;
+}
+
+/* =======================
+   NAVBAR (FINTECH STYLE)
+======================= */
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+  padding: 15px 30px;
+  background: linear-gradient(90deg, #04577e, #0842c0);
+  color: white;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.2s;
+}
+
+.navbar a:hover {
+  color: #d1fae5;
+}
+
+.navbar a.active {
+  border-bottom: 2px solid #fff;
+  padding-bottom: 2px;
+}
+
+.logo {
+  position: absolute;
+  left: 20px;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+/* =======================
+   GRID LAYOUT (CARDS)
+======================= */
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 15px;
+}
+
+/* =======================
+   CARD DESIGN (FINTECH)
+======================= */
+
+.card {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+  transition: all 0.3s ease;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeUp 0.4s forwards;
+}
+
+body.dark .card {
+  background: #1e293b;
+  color: white;
+}
+
+.card:hover {
+  transform: scale(1.03);
+}
+
+/* stagger animation */
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* =======================
+   CREDIT / DEBIT COLORS
+======================= */
+
+.credit {
+  border-left: 5px solid #22c55e;
+}
+
+.debit {
+  border-left: 5px solid #ef4444;
+}
+
+/* =======================
+   BUTTONS
+======================= */
+
+button {
+  padding: 8px 12px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  margin: 5px;
+  background: #2563eb;
+  color: white;
+  transition: 0.2s;
+}
+
+button:hover {
+  background: #1d4ed8;
+}
+
+/* =======================
+   INPUTS
+======================= */
+
+input {
+  padding: 10px;
+  margin: 5px 0;
+  width: 100%;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  outline: none;
+}
+
+input:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 5px rgba(37, 99, 235, 0.3);
+}
+
+/* =======================
+   FADE PAGE TRANSITION
+======================= */
+
+.page {
+  animation: pageFade 0.4s ease-in;
+}
+
+@keyframes pageFade {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
